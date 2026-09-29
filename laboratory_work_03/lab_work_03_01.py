@@ -7,8 +7,12 @@ try:
     dx = float(input("Введите шаг dx: "))
     r = 1
 
-    if Xbeg > Xend:
+    if Xbeg < -3 or Xend > 5:
+        print("Введите значения в диапозоне от -3 до 5")
+    elif Xbeg > Xend:
         print("Введите корректные данные. Xbeg должен быть меньше Xend")
+    elif dx <= 0:
+        print("Шаг dx должен быть больше нуля.")
     else:
         print(f"Xbeg = {Xbeg:.2f}   Xend = {Xend:.2f}")
         print(f"Dx= {dx:.2f}")
@@ -35,4 +39,4 @@ try:
         print("+--------+--------+")
 
 except ValueError:
-    print("Ошибка: нужно вводить только числа!")
+    print("Нужно вводить только числа!")

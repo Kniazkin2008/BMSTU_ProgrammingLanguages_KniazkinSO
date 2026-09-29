@@ -1,5 +1,6 @@
 from random import uniform
 
+
 try:
     r = float(input("Введите r: "))
 
@@ -13,7 +14,7 @@ try:
             x = uniform(-r, r)
             y = uniform(-r, r)
 
-            if (x <= 0 and 0 >= y >= (-x - r)) or (x >= 0 and y >= 0 and y ** 2 <= r ** 2 - x ** 2):
+            if (x <= 0 and 0 >= y >= -x - r) or (x >= 0 and y >= 0 and y ** 2 <= r ** 2 - x ** 2):
                 flag = 1
             else:
                 flag = 0
@@ -24,4 +25,4 @@ try:
                 print("{:8.2f} {:8.2f} {:>5}".format(x, y, "No"))
 
 except ValueError:
-    print("Не возможно преобразовать входные данные.")
+    print("Невозможно преобразовать входные данные.")
